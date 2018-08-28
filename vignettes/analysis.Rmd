@@ -22,9 +22,6 @@ about markdown here](http://rmarkdown.rstudio.com/authoring_basics.html) and
 [details about code chunks
 here](http://rmarkdown.rstudio.com/authoring_rcodechunks.html).
 
-This template document in Rmarkdown format is located at 
-https://github.com/nescent/popgenInfo/tree/master/TEMPLATE.Rmd.
-
 # Assumptions
 
 All biological analyses have assumptions.
@@ -36,22 +33,10 @@ All biological analyses have assumptions.
 
 ## Data
 
-Links to information about the data if needed e.g. package vignettes. You can
-use an [external
-link](https://github.com/cran/adegenet/blob/master/inst/files/nancycats.gtx) or
-you can place the data [in the `data/` folder](https://github.com/nescent/popgenInfo/blob/master/data/nancycats.gtx)
-(please keep this < 200kb).
+Information about the data. 
 
-## Packages
-
-Packages required. Say where these can be found, can link to the list of
-packages on our repository page here also.
-
-Loading the required packages:  
-
-```{r, packages, message=FALSE}
-library("survival")
-```
+Note that there are several ways to include data in your package, documented at 
+http://r-pkgs.had.co.nz/data.html
 
 # Analysis (divided into sections)
 
@@ -80,9 +65,9 @@ Thank you to [@NESCent](https://github.com/NESCent) for providing the
 
 # Session Information
 
-This shows us useful information for reproducibility. Of particular importance
-are the versions of R and the packages used to create this workflow. It is
-considered good practice to record this information with every analysis.
+This shows which packages and versions were used for the analysis. Note that under
+RStudio "Tools - Project Options" you can select "Packrat" to create a project-specific
+library to ensure other analysts will run the exact same version of all packages.
 
 ```{r, sessioninfo}
 options(width = 100)
