@@ -1,5 +1,12 @@
 ---
-title: "Template Vignette"
+title: "Vignette Title"
+author: "J. Doe"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 ---
 
 # Research Question
@@ -43,8 +50,7 @@ packages on our repository page here also.
 Loading the required packages:  
 
 ```{r, packages, message=FALSE}
-library("hierfstat")
-library("adegenet")
+library("survival")
 ```
 
 # Analysis (divided into sections)
@@ -53,52 +59,13 @@ Example Sections
 
 ## Section 1: Load the data
 
-We will import "nancycats.gtx" to a "genind" object (from the package
-*adegenet*) called `nancycats`.
-
-```{r load_data_show, eval=FALSE}
-nancycats <- import2genind("nancycats.gtx")
-nancycats
-```
-
-```{r load_data_evaluate, echo=FALSE}
-# Note: the code chunk above will be shown to the reader, but it will not run.
-# This code chunk will run, but will not be shown to the reader.
-nancycats <- import2genind("../data/nancycats.gtx")
-nancycats
-```
-
 ## Section 2: Exploratory Data analysis/Checking assumptions  
   
 ## Section 3: Summary statistics  
 
-Sometimes packages contain their own useful summary statistics, such as expected
-heterozygosity.
-
-```{r summary_cats}
-nan_summary <- summary(nancycats)
-nan_summary
-```
-
 ## Section 4: Visualizing the results
 
-Often, it's useful to plot these results.
-
-```{r visual_summary}
-plot(nan_summary$Hexp, nan_summary$Hobs, 
-     xlab = "Expected Heterozygosity", ylab = "Observed Heterozygosity")
-abline(0, 1, lty = 2) # adding a 1:1 line
-```
-
-This plot shows us that the observed heterozygosity of these cat colonies is lower
-than the expected heterozygosity. 
-
 # Conclusions
-
-## What's next
-
-Information on further analysis that could be done, other workflows [can be
-linked as well](DifferentiationSNP.html) (note the HTML as opposed to Rmd link).
 
 # Contributors
 
