@@ -1,13 +1,30 @@
 ---
 title: "Vignette Title"
-author: "J. Doe"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
+author: "Vignette Author"
+date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+  %\VignetteEncoding{UTF-8}
 ---
+
+```{r setup, include = TRUE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+For interactive / manual vignette building, setting caching instead to TRUE 
+can dramatically speed up the builds, by caching the results of each chunk.
+
+```{r}
+knitr::opts_chunk$set(cache=FALSE)
+```
+
+
+
 
 # Research Question
 
@@ -73,5 +90,4 @@ library to ensure other analysts will run the exact same version of all packages
 options(width = 100)
 devtools::session_info()
 ```
-
 
