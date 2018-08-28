@@ -29,4 +29,10 @@ gardasil
 \description{
 The Gardasil dataset in R data.frame format
 }
+\details{
+Note that a cleaned dataset like this is provided, it is recommended
+to place the code that produces it in data-raw. You can then use
+devtools::use_data_raw() to update the cleaned dataset in data/. See
+http://r-pkgs.had.co.nz/data.html .
+}
 \keyword{datasets}
