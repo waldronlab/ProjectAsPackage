@@ -17,7 +17,7 @@
 #' gardasil2 <- read_gardasil()
 #' summary(gardasil2)
 read_gardasil <- function(other.as.NA = FALSE) {
-  filename <- system.file("gardasil.csv", package="ProjectAsPackage")
+  filename <- system.file("extdata/gardasil.csv", package="ProjectAsPackage")
   gardasil <- utils::read.csv(filename, as.is=TRUE)
   gardasil$AgeGroup <-
     factor(gardasil$AgeGroup,
