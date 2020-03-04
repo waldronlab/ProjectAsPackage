@@ -16,15 +16,17 @@ knitr::opts_chunk$set(
 )
 ```
 
-For interactive / manual vignette building, setting caching instead to TRUE 
-can dramatically speed up the builds, by caching the results of each chunk.
+# Preamble
 
-```{r}
+The `ProjectAsPackage` package and this vignette provide a template for generating reproducible analyses as an R package. [Its repo](https://www.github.com/waldronlab/ProjectAsPackage) is set up as a GitHub "template" allowing you to initiate a new repository with it as the starting point for a new analysis.
+
+
+For interactive / manual vignette building, setting caching instead to TRUE 
+can dramatically speed up the builds, by caching the results of each chunk. The caching line is not shown in output because of the option `echo=FALSE`. 
+
+```{r, echo=FALSE}
 knitr::opts_chunk$set(cache=FALSE)
 ```
-
-
-
 
 # Research Question
 
@@ -54,6 +56,10 @@ Information about the data.
 
 Note that there are several ways to include data in your package, documented at 
 http://r-pkgs.had.co.nz/data.html
+
+**ProjectAsPackage** demonstrates two ways:
+1. as a prepared R object (in this case `data.frame`) prepared and stored as `data/gardasil.rda`in the package's directory and documented in the file `R/gardasil.R`.
+2. as a *.csv* file `inst/extdata/gardasil.csv`
 
 # Analysis (divided into sections)
 
