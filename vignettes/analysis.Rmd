@@ -1,9 +1,9 @@
 ---
-title: "Vignette Title"
+title: "Analysis Vignette"
 author: "Vignette Author"
 date: "`r Sys.Date()`"
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Analysis Vignette}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 output: 
