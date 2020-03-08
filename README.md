@@ -4,6 +4,10 @@
 
 This repo provides a demonstration of the use of an R package to organize a data analysis project. Click on "[Use this template](https://github.com/waldronlab/ProjectAsPackage/generate)" to create a new GitHub repo starting with this code. 
 
+## Building
+
+Building is most easily done using the "Build" menu in [RStudio](https://rstudio.com/). Building roxygen documentation requires the [roxygen2](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html) package.
+
 ## Licensing
 
 <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
@@ -25,6 +29,7 @@ This work is published from:
 </p>
 
 ## Authors
+
 Chloe Mirzayi and Levi Waldron \
 CUNY Graduate School of Public Health and Health Policy \
 Institute for Implementation Science in Public Health
