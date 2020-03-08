@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Project-as-a-package
 
 ## Summary
@@ -16,11 +21,15 @@ The [ProjectAsPackage](https://www.github.com/waldronlab/ProjectAsPackage) packa
 
 Building is most easily done using the "Build" menu in [RStudio](https://rstudio.com/). Building roxygen documentation requires the [roxygen2](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html) package.
 
-## pkgdown
+## pkgdown to make a web page
 
-To easily publish your package and analysis as a web site using [pkgdown](https://pkgdown.r-lib.org/articles/pkgdown.html) (publicly on GitHub-pages or locally), you can use the commands in the script [update.sh](https://github.com/waldronlab/ProjectAsPackage/blob/master/update.sh). This very short script uses the command-line program `gh-pages` to publish to GitHub pages, and you can install it by `pip install gh-pages`.
+To easily publish your package and analysis as a web site using [pkgdown](https://pkgdown.r-lib.org/articles/pkgdown.html) (publicly on GitHub-pages or locally), you can use the commands in the script [update.sh](https://github.com/waldronlab/ProjectAsPackage/blob/master/update.sh). This very short script runs the command `pkgdown::build_site(lazy=TRUE)`. 
 
 You can customize the website with the [_pkgdown.yml](https://github.com/waldronlab/ProjectAsPackage/blob/master/_pkgdown.yml) file using instructions from [pkgdown](https://pkgdown.r-lib.org/articles/pkgdown.html).
+
+**To activate GitHub pages**, from your GitHub repo you need to click on "Settings" on the top toolbar, scroll down to "GitHub Pages", then change "None - Disable GitHub Pages" to "master branch /docs folder". If you can't select this option, it's because you haven't yet pushed a master branch docs folder created by pkgdown to GitHub.
+
+See the result [here](http://waldronlab.io/ProjectAsPackage/).
 
 ## Licensing
 
@@ -44,6 +53,6 @@ This work is published from:
 
 ## Authors
 
-Chloe Mirzayi, Audrey Renson, Levi Waldron \
-CUNY Graduate School of Public Health and Health Policy \
+Chloe Mirzayi, Audrey Renson, Levi Waldron \newline
+CUNY Graduate School of Public Health and Health Policy \newline
 Institute for Implementation Science in Public Health
