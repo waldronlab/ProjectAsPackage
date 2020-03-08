@@ -1,8 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 # Project-as-a-package
 
 ## Summary
@@ -53,6 +48,7 @@ This work is published from:
 
 ## Authors
 
-Chloe Mirzayi, Audrey Renson, Levi Waldron \newline
-CUNY Graduate School of Public Health and Health Policy \newline
+Chloe Mirzayi, Audrey Renson, Levi Waldron
+
+CUNY Graduate School of Public Health and Health Policy\
 Institute for Implementation Science in Public Health
