@@ -20,6 +20,6 @@
 #' vaccine initiators. Obstet. Gynecol. 2011, 118:14–20.
 #' @details Note that a cleaned dataset like this is provided, it is recommended
 #' to place the code that produces it in data-raw. You can then use
-#' devtools::use_data_raw() to update the cleaned dataset in data/. See
+#' usethis::use_data_raw() to update the cleaned dataset in data/. See
 #' http://r-pkgs.had.co.nz/data.html.
 "gardasil"

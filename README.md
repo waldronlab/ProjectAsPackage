@@ -3,7 +3,8 @@
 
 ## Summary
 
-The [ProjectAsPackage](https://www.github.com/waldronlab/ProjectAsPackage) package and this vignette provide a template for generating reproducible analyses as an R package. Why? Using an R package has some advantages:
+[ProjectAsPackage](https://www.github.com/waldronlab/ProjectAsPackage) provides a template for generating reproducible analyses as an R package. Why? Using an R package has some advantages:
+
 * You can separate re-usable functions from your analysis, and have help pages for these functions. You can also use help pages as "codebooks" for the datasets.
 * You can include data and code in the same package. If the data are somewhat big, you can use [Git Large File Storage](https://git-lfs.github.com/). 
 * You can automatically install all needed packages when installing this package, just by adding these packages to the "Depends" section or "Imports" section of the DESCRIPTION file.
