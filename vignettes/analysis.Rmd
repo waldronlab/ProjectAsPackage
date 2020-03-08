@@ -71,7 +71,7 @@ You might choose to hide this code using the option `echo=FALSE` in the code chu
 
 ### Option 1 - data cleaning done prior to saving an R object in package directory `data/gardasil.rda`:
 
-```{r}
+```{r datagardasil}
 data(gardasil)
 class(gardasil)
 summary(gardasil)
@@ -89,7 +89,7 @@ See the function `R/read_gardasil.R`, with automatically-generated help page `ma
 ?read_gardasil
 ```
 
-```{r}
+```{r read_gardasil}
 gardasil2 <- read_gardasil()
 class(gardasil2)
 summary(gardasil2)
