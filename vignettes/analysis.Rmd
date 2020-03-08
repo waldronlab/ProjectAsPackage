@@ -24,17 +24,8 @@ knitr::opts_chunk$set(
 
 # Preamble
 
-The `ProjectAsPackage` package and this vignette provide a template for generating reproducible analyses as an R package. This template demonstrates setup for analyzing published data from:
-
-> Chou B, Krill LS, Horton BB, Barat CE, Trimble CL:
-> Disparities in human papillomavirus vaccine completion among
-> vaccine initiators. Obstet. Gynecol. 2011, 118:14–20.
-
-
-[Its repo](https://www.github.com/waldronlab/ProjectAsPackage) is set up as a GitHub "template" allowing you to initiate a new repository with it as the starting point for a new analysis. [Transfer to your own GitHub repo](https://github.com/waldronlab/ProjectAsPackage/generate).
-
 For interactive / manual vignette building, setting caching instead to TRUE 
-in the above code chunk can dramatically speed up the builds, by caching the results of each chunk. 
+in the above code chunk can dramatically speed up the builds, by caching the results of each chunk. Note that the above chunk is not shown in the built version of the vignette because of the `echo=FALSE` option.
 
 First load the analysis library:
 ```{r}
