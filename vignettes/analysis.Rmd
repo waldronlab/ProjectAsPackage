@@ -29,31 +29,15 @@ First load the analysis library:
 library(ProjectAsPackage)
 ```
 
-# Research Question
+# R Markdown
 
-A short sentence describing the question central to the analysis.
-
-# Introduction
-
-Explain the purpose of the vignette. Give a brief explanation of the questions
-that will be answered and some background information. These vignettes are
+This vignette is
 written in [Rmarkdown](http://rmarkdown.rstudio.com). You can find [details
 about markdown here](http://rmarkdown.rstudio.com/authoring_basics.html) and
 [details about code chunks
 here](http://rmarkdown.rstudio.com/authoring_rcodechunks.html).
 
-# Assumptions
-
-All biological analyses have assumptions.
-
-- Assumption 1
-- Assumption 2
-
-# Resources
-
-## Data
-
-Information about the data. 
+# Data
 
 Note that there are several ways to include data in your package, documented at 
 http://r-pkgs.had.co.nz/data.html
@@ -62,15 +46,7 @@ http://r-pkgs.had.co.nz/data.html
 1. as a prepared R object (in this case `data.frame`) prepared and stored as `data/gardasil.rda`in the package's directory and documented in the file `R/gardasil.R`.
 2. as a *.csv* file `inst/extdata/gardasil.csv`
 
-# Analysis (divided into sections)
-
-Example Sections
-
-## Section 1: Load the data
-
-You might choose to hide this code using the option `echo=FALSE` in the code chunks below.
-
-### Option 1 - data cleaning done prior to saving an R object in package directory `data/gardasil.rda`:
+## Option 1 - data cleaning done prior to saving an R object in package directory `data/gardasil.rda`:
 
 ```{r datagardasil}
 data(gardasil)
@@ -82,7 +58,7 @@ The data-cleaning script used to create the `data/gardasil.rda` file is traditio
 ?gardasil
 ```
 
-### Option 2 - a function to load and clean the raw data
+## Option 2 - a function to load and clean the raw data
 
 See the function `R/read_gardasil.R`, with automatically-generated help page `man/read_gardasil.Rd`.
 
@@ -103,25 +79,6 @@ gardasil3 <- read_gardasil(other.as.NA = TRUE)
 summary(gardasil3$RaceSummary)
 ```
 
-## Section 2: Exploratory Data analysis/Checking assumptions  
-  
-## Section 3: Summary statistics  
-
-## Section 4: Visualizing the results
-
-# Conclusions
-
-# Contributors
-
-- Author 1 (Author)
-- Author 2 (Author)
-- Contributor 1 (role)
-
-# Acknowledgements
-
-Thank you to [@NESCent](https://github.com/NESCent) for providing the 
-[template](https://github.com/NESCent/popgenInfo) for this vignette.
-
 # Session Information
 
 This shows which packages and versions were used for the analysis. Note that under
@@ -130,6 +87,8 @@ library to ensure other analysts will run the exact same version of all packages
 
 ```{r, sessioninfo}
 options(width = 100)
-devtools::session_info()
+sessionInfo()
 ```
+
+Note, if you have devtools installed you might use `devtools::session_info()` to provide a more detailed and structured session info.
 
