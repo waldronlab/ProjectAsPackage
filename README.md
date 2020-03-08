@@ -27,7 +27,7 @@ To easily publish your package and analysis as a web site using [pkgdown](https:
 
 You can customize the website with the [_pkgdown.yml](https://github.com/waldronlab/ProjectAsPackage/blob/master/_pkgdown.yml) file using instructions from [pkgdown](https://pkgdown.r-lib.org/articles/pkgdown.html).
 
-**To activate GitHub pages**, from your GitHub repo you need to click on "Settings" on the top toolbar, scroll down to "GitHub Pages", then change "None - Disable GitHub Pages" to "master branch /docs folder". If you can't select this option, it's because you haven't yet pushed a master branch docs folder created by pkgdown to GitHub.
+**To activate GitHub pages**, from your GitHub repo you need to click on "Settings" on the top toolbar, scroll down to "GitHub Pages", then change "None - Disable GitHub Pages" to "master branch /docs folder". You should now see the URL for your new web page here.  If you can't select this option, it's because you haven't yet pushed a master branch docs folder created by pkgdown to GitHub. 
 
 See the result [here](http://waldronlab.io/ProjectAsPackage/).
 
