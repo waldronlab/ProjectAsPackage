@@ -77,6 +77,9 @@ read_gardasil <- function(other.as.NA = FALSE) {
   levels(gardasil$RaceSummary) <-
     c("white", "minority", "minority", "other/unknown")
   if (other.as.NA)
+    gardasil$Race[gardasil$Race == "other/unknown"] <- NA
+    gardasil$Race <- factor(gardasil$Race)
     gardasil$RaceSummary[gardasil$RaceSummary == "other/unknown"] <- NA
+    gardasil$RaceSummary <- factor(gardasil$RaceSummary)
   return(gardasil)
 }
