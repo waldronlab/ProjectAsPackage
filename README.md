@@ -50,5 +50,5 @@ This work is published from:
 
 Chloe Mirzayi, Audrey Renson, Levi Waldron
 
-CUNY Graduate School of Public Health and Health Policy\
+CUNY Graduate School of Public Health and Health Policy<br/>
 Institute for Implementation Science in Public Health
