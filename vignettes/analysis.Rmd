@@ -12,7 +12,8 @@ vignette: >
 ```{r setup, include = TRUE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  cache = FALSE
 )
 ```
 
@@ -20,12 +21,12 @@ knitr::opts_chunk$set(
 
 The `ProjectAsPackage` package and this vignette provide a template for generating reproducible analyses as an R package. [Its repo](https://www.github.com/waldronlab/ProjectAsPackage) is set up as a GitHub "template" allowing you to initiate a new repository with it as the starting point for a new analysis.
 
-
 For interactive / manual vignette building, setting caching instead to TRUE 
-can dramatically speed up the builds, by caching the results of each chunk. The caching line is not shown in output because of the option `echo=FALSE`. 
+in the above code chunk can dramatically speed up the builds, by caching the results of each chunk. 
 
-```{r, echo=FALSE}
-knitr::opts_chunk$set(cache=FALSE)
+First load the analysis library:
+```{r}
+library(ProjectAsPackage)
 ```
 
 # Research Question
