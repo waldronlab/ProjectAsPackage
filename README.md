@@ -30,6 +30,6 @@ This work is published from:
 
 ## Authors
 
-Chloe Mirzayi and Levi Waldron \
+Chloe Mirzayi, Audrey Renson, Levi Waldron \
 CUNY Graduate School of Public Health and Health Policy \
 Institute for Implementation Science in Public Health
