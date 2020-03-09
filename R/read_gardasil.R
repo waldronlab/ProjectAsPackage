@@ -10,7 +10,9 @@
 #' its coefficients are not reported.
 #'
 #' @return
-#' Cleaned/formatted data.frame
+#' Cleaned/formatted data.frame. This data.frame could be documented here as its
+#' codebook, but such documentation is demonstrated under the prepared
+#' `gardasil` dataset (see `?gardasil`)
 #' @export
 #'
 #' @examples

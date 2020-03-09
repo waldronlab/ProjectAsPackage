@@ -11,7 +11,9 @@ read_gardasil(other.as.NA = FALSE)
 If TRUE, treat unknown/other race as NA.}
 }
 \value{
-Cleaned/formatted data.frame
+Cleaned/formatted data.frame. This data.frame could be documented here as its
+codebook, but such documentation is demonstrated under the prepared
+`gardasil` dataset (see `?gardasil`)
 }
 \description{
 Title Read Gardasil data from csv file
