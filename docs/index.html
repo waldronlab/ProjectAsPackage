@@ -97,8 +97,7 @@
 <div id="how-to-make-your-own-copy-of-projectaspackage-on-github" class="section level2">
 <h2 class="hasAnchor">
 <a href="#how-to-make-your-own-copy-of-projectaspackage-on-github" class="anchor"></a>How to make your own copy of ProjectAsPackage on GitHub</h2>
-<p>Click on “<a href="https://github.com/waldronlab/ProjectAsPackage/generate">Use this template</a>” to create a new GitHub repo starting with this code.</p>
-<p><a href="https://www.github.com/waldronlab/ProjectAsPackage">ProjectAsPackage</a> is set up as a GitHub “template” allowing you to initiate a new repository with it as the starting point for a new analysis. <a href="https://github.com/waldronlab/ProjectAsPackage/generate">Transfer to your own GitHub repo</a>.</p>
+<p><a href="https://www.github.com/waldronlab/ProjectAsPackage">ProjectAsPackage</a> is set up as a GitHub “template” allowing you to initiate a new repository with it as the starting point for a new analysis. Click on “<a href="https://github.com/waldronlab/ProjectAsPackage/generate">Use this template</a>” to create a new GitHub repo starting with this code.</p>
 </div>
 <div id="building" class="section level2">
 <h2 class="hasAnchor">
@@ -110,8 +109,13 @@
 <a href="#pkgdown-to-make-a-web-page" class="anchor"></a>pkgdown to make a web page</h2>
 <p>To easily publish your package and analysis as a web site using <a href="https://pkgdown.r-lib.org/articles/pkgdown.html">pkgdown</a> (publicly on GitHub-pages or locally), you can use commands in the script <a href="https://github.com/waldronlab/ProjectAsPackage/blob/master/update.sh">update.sh</a>. This very short script runs the command <code><a href="https://pkgdown.r-lib.org/reference/build_site.html">pkgdown::build_site(lazy=TRUE)</a></code>.</p>
 <p>You can customize the website with the <a href="https://github.com/waldronlab/ProjectAsPackage/blob/master/_pkgdown.yml">_pkgdown.yml</a> file using instructions from <a href="https://pkgdown.r-lib.org/articles/pkgdown.html">pkgdown</a>.</p>
+<div id="automatic-hyperlinking-to-help-pages" class="section level3">
+<h3 class="hasAnchor">
+<a href="#automatic-hyperlinking-to-help-pages" class="anchor"></a>Automatic hyperlinking to help pages</h3>
+<p>Note that the line in this <a href="https://github.com/waldronlab/ProjectAsPackage/blob/master/_pkgdown.yml">_pkgdown.yml</a> providing the site URL is only there to provide correct hyperlinking to help pages, such as <code>?gardasil</code>. For correct hyperlinking to help pages, the URL needs to be provided here and in the <a href="https://github.com/waldronlab/ProjectAsPackage/blob/master/DESCRIPTION">DESCRIPTION</a> <code>URL:</code> line.</p>
 <p><strong>To activate GitHub pages</strong>, from your GitHub repo you need to click on “Settings” on the top toolbar, scroll down to “GitHub Pages”, then change “None - Disable GitHub Pages” to “master branch /docs folder”. You should now see the URL for your new web page here. If you can’t select this option, it’s because you haven’t yet pushed a master branch docs folder created by pkgdown to GitHub.</p>
 <p>See the result <a href="http://waldronlab.io/ProjectAsPackage/">here</a>.</p>
+</div>
 </div>
 <div id="licensing" class="section level2">
 <h2 class="hasAnchor">
