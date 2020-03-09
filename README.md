@@ -21,9 +21,7 @@
 
 ## How to make your own copy of ProjectAsPackage on GitHub
 
-Click on "[Use this template](https://github.com/waldronlab/ProjectAsPackage/generate)" to create a new GitHub repo starting with this code. 
-
-[ProjectAsPackage](https://www.github.com/waldronlab/ProjectAsPackage) is set up as a GitHub "template" allowing you to initiate a new repository with it as the starting point for a new analysis. [Transfer to your own GitHub repo](https://github.com/waldronlab/ProjectAsPackage/generate).
+[ProjectAsPackage](https://www.github.com/waldronlab/ProjectAsPackage) is set up as a GitHub "template" allowing you to initiate a new repository with it as the starting point for a new analysis. Click on "[Use this template](https://github.com/waldronlab/ProjectAsPackage/generate)" to create a new GitHub repo starting with this code. 
 
 ## Building
 
@@ -33,7 +31,11 @@ Building is most easily done using the "Build" menu in [RStudio](https://rstudio
 
 To easily publish your package and analysis as a web site using [pkgdown](https://pkgdown.r-lib.org/articles/pkgdown.html) (publicly on GitHub-pages or locally), you can use commands in the script [update.sh](https://github.com/waldronlab/ProjectAsPackage/blob/master/update.sh). This very short script runs the command `pkgdown::build_site(lazy=TRUE)`. 
 
-You can customize the website with the [_pkgdown.yml](https://github.com/waldronlab/ProjectAsPackage/blob/master/_pkgdown.yml) file using instructions from [pkgdown](https://pkgdown.r-lib.org/articles/pkgdown.html).
+You can customize the website with the [_pkgdown.yml](https://github.com/waldronlab/ProjectAsPackage/blob/master/_pkgdown.yml) file using instructions from [pkgdown](https://pkgdown.r-lib.org/articles/pkgdown.html). 
+
+### Automatic hyperlinking to help pages
+
+Note that the line in this [_pkgdown.yml](https://github.com/waldronlab/ProjectAsPackage/blob/master/_pkgdown.yml) providing the site URL is only there to provide correct hyperlinking to help pages, such as `?gardasil`. For correct hyperlinking to help pages, the URL needs to be provided here and in the [DESCRIPTION](https://github.com/waldronlab/ProjectAsPackage/blob/master/DESCRIPTION) `URL:` line.
 
 **To activate GitHub pages**, from your GitHub repo you need to click on "Settings" on the top toolbar, scroll down to "GitHub Pages", then change "None - Disable GitHub Pages" to "master branch /docs folder". You should now see the URL for your new web page here.  If you can't select this option, it's because you haven't yet pushed a master branch docs folder created by pkgdown to GitHub. 
 
