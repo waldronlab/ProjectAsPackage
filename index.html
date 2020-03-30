@@ -71,6 +71,8 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
+
+
 <div id="project-as-a-package" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#project-as-a-package" class="anchor"></a>Project-as-a-package</h1></div>
@@ -112,10 +114,27 @@
 <div id="automatic-hyperlinking-to-help-pages" class="section level3">
 <h3 class="hasAnchor">
 <a href="#automatic-hyperlinking-to-help-pages" class="anchor"></a>Automatic hyperlinking to help pages</h3>
-<p>Note that the line in this <a href="https://github.com/waldronlab/ProjectAsPackage/blob/master/_pkgdown.yml">_pkgdown.yml</a> providing the site URL is only there to provide correct hyperlinking to help pages, such as <code>?gardasil</code>. For correct hyperlinking to help pages, the URL needs to be provided here and in the <a href="https://github.com/waldronlab/ProjectAsPackage/blob/master/DESCRIPTION">DESCRIPTION</a> <code>URL:</code> line.</p>
+<p>Note that the line in this <a href="https://github.com/waldronlab/ProjectAsPackage/blob/master/_pkgdown.yml">_pkgdown.yml</a> providing the site URL is only there to provide correct hyperlinking to help pages, such as <code><a href="reference/gardasil.html">?gardasil</a></code>. For correct hyperlinking to help pages, the URL needs to be provided here and in the <a href="https://github.com/waldronlab/ProjectAsPackage/blob/master/DESCRIPTION">DESCRIPTION</a> <code>URL:</code> line.</p>
 <p><strong>To activate GitHub pages</strong>, from your GitHub repo you need to click on “Settings” on the top toolbar, scroll down to “GitHub Pages”, then change “None - Disable GitHub Pages” to “master branch /docs folder”. You should now see the URL for your new web page here. If you can’t select this option, it’s because you haven’t yet pushed a master branch docs folder created by pkgdown to GitHub.</p>
 <p>See the result <a href="http://waldronlab.io/ProjectAsPackage/">here</a>.</p>
 </div>
+</div>
+<div id="travis-ci-for-continuous-integration" class="section level2">
+<h2 class="hasAnchor">
+<a href="#travis-ci-for-continuous-integration" class="anchor"></a>travis-CI for continuous integration</h2>
+<p>This GitHub site is set up to automatically build, check, and deploy the pkgdown site to GitHub Pages with every commit. See the file [.travis.yml] for a template and setup instructions. You will have to:</p>
+<ol>
+<li>edit the [.travis.yml] file</li>
+<li>edit the README.md file if you want to show a Travis badge on your GitHub site,</li>
+<li>link your GitHub account to Travis-ci.org,</li>
+<li>activate your GitHub repo on Travis: <a href="https://docs.travis-ci.com/user/deployment/pages/" class="uri">https://docs.travis-ci.com/user/deployment/pages/</a>. The Travis site for this repo then appeared at <a href="https://docs.travis-ci.com/user/deployment/pages/" class="uri">https://docs.travis-ci.com/user/deployment/pages/</a>
+</li>
+<li>create a GitHub token at <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a> (for “scopes” choose “repo” and “admin:repo_hook”)</li>
+<li>enter this token as an environment value with name “GITHUB_TOKEN”, “available to all branches”, on travis-ci.org at <a href="https://travis-ci.org/github/waldronlab/ProjectAsPackage/settings" class="uri">https://travis-ci.org/github/waldronlab/ProjectAsPackage/settings</a>
+</li>
+<li>Create an initially empty gh-pages branch, where GitHub Pages will be deployed: <code>git checkout --orphan gh-pages git rm -rf . git commit --allow-empty -m 'Initial gh-pages commit' git push origin gh-pages git checkout master</code>
+</li>
+</ol>
 </div>
 <div id="licensing" class="section level2">
 <h2 class="hasAnchor">
@@ -141,6 +160,7 @@ This work is published from:
 <p>CUNY Graduate School of Public Health and Health Policy<br> Institute for Implementation Science in Public Health</p>
 </div>
 </div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -157,7 +177,14 @@ This work is published from:
 </ul>
 </div>
 
-  </div>
+  <div class="dev-status">
+<h2>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://travis-ci.org/waldronlab/ProjectAsPackage"><img src="https://travis-ci.org/waldronlab/ProjectAsPackage.svg?branch=master" alt="Travis-CI Build Status"></a></li>
+<li><a href="https://codecov.io/github/waldronlab/ProjectAsPackage?branch=master"><img src="https://codecov.io/github/waldronlab/ProjectAsPackage/coverage.svg?branch=master" alt="Coverage Status"></a></li>
+</ul>
+</div>
+</div>
 </div>
 
 
