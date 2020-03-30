@@ -31,12 +31,13 @@ before_cache:
 
 after_success:
   - Rscript -e 'covr::codecov()'
+  - Rscript -e 'pkgdown::build_site(lazy=TRUE)'
   - ls -lt
   - ls docs/
   - git status docs
   - git add docs
   - git stage docs
-  - Rscript -e 'pkgdown::deploy_site_github()'
+
   
 ## See https://docs.travis-ci.com/user/deployment/pages/
 deploy:
