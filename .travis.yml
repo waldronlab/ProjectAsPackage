@@ -34,6 +34,8 @@ after_success:
 
 before_deploy:
   - Rscript -e 'pkgdown::build_site(lazy=TRUE)'
+  - git add docs/
+  - git stage docs/
 
 ## See https://docs.travis-ci.com/user/deployment/pages/
 deploy:
