@@ -1,8 +1,0 @@
-pandoc: 1.19.2.1
-pkgdown: 1.4.1
-pkgdown_sha: ~
-articles: []
-urls:
-  reference: https://waldronlab.io/ProjectAsPackage/reference
-  article: https://waldronlab.io/ProjectAsPackage/articles
-
