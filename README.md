@@ -45,6 +45,27 @@ Note that the line in this [_pkgdown.yml](https://github.com/waldronlab/ProjectA
 
 See the result [here](http://waldronlab.io/ProjectAsPackage/).
 
+## travis-CI for continuous integration
+
+This GitHub site is set up to automatically build, check, and deploy
+the pkgdown site to GitHub Pages with every commit. See the file
+[.travis.yml] for a template and setup instructions. You will have to:
+
+1. edit the [.travis.yml] file
+2. edit the README.md file if you want to show a Travis badge on your GitHub site,
+3. link your GitHub account to Travis-ci.org,
+4. activate your GitHub repo on Travis: https://docs.travis-ci.com/user/deployment/pages/. The Travis site for this repo then appeared at https://docs.travis-ci.com/user/deployment/pages/
+4. create a GitHub token at https://github.com/settings/tokens (for "scopes" choose "repo" and "admin:repo_hook")
+5. enter this token as an environment value with name "GITHUB_TOKEN", "available to all branches", on travis-ci.org at https://travis-ci.org/github/waldronlab/ProjectAsPackage/settings
+6. Create an initially empty gh-pages branch, where GitHub Pages will be deployed:
+```git checkout --orphan gh-pages
+git rm -rf .
+git commit --allow-empty -m 'Initial gh-pages commit'
+git push origin gh-pages
+git checkout master
+```
+
+
 ## Licensing
 
 <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
