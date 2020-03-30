@@ -1,20 +1,28 @@
-# R for travis documentation: https://docs.travis-ci.com/user/languages/r
-# Activated this repo at https://travis-ci.org/organizations/waldronlab/repositories
+## R for travis documentation: https://docs.travis-ci.com/user/languages/r
+## Activated this repo at https://travis-ci.org/organizations/waldronlab/repositories
+## Now at https://travis-ci.org/github/waldronlab/ProjectAsPackage
 
-# Get rid of the "deploy" section if you don't want to deploy a website to GitHub Pages
-# Create a token at https://github.com/settings/tokens (for "scopes" choose "repo" and "admin:repo_hook")
-# Enter this token as an environment value with name "GITHUB_TOKEN", "available to all branches", on travis-ci.org at
-#      https://travis-ci.org/github/waldronlab/ProjectAsPackage/settings
+## Get rid of the "deploy" section if you don't want to deploy a website to GitHub Pages
+## Create a token at https://github.com/settings/tokens (for "scopes" choose "repo" and "admin:repo_hook")
+## Enter this token as an environment value with name "GITHUB_TOKEN", "available to all branches", on travis-ci.org at
+##      https://travis-ci.org/github/waldronlab/ProjectAsPackage/settings
+
+## To create an initially empty gh-pages branch, where GitHub Pages will be deployed:
+# git checkout --orphan gh-pages
+# git rm -rf .
+# git commit --allow-empty -m 'Initial gh-pages commit'
+# git push origin gh-pages
+# git checkout master
 
 language: r
 r:
   - release
 cache: packages
 
-# Strict checks in place
+## Strict checks in place?
 warnings_are_errors: false
 
-# Test code coverage
+## Test code coverage
 r_github_packages:
   - jimhester/covr
 
@@ -22,11 +30,14 @@ before_cache:
   - Rscript -e 'remotes::install_cran("pkgdown")'
 
 after_success:
-  - Rscript -e 'library(covr);codecov()'
-
+  - Rscript -e 'covr::codecov()'
+  - Rscript -e 'pkgdown::build_site(lazy=TRUE)'
+  
+## See https://docs.travis-ci.com/user/deployment/pages/
 deploy:
   provider: pages
-  script: Rscript -e 'pkgdown::deploy_site_github()'
+  local_dir: docs/
+  target_branch: gh-pages
   cleanup: false
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
