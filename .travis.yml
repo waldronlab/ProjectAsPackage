@@ -1,6 +1,11 @@
 # R for travis documentation: https://docs.travis-ci.com/user/languages/r
 # Activated this repo at https://travis-ci.org/organizations/waldronlab/repositories
 
+# Get rid of the "deploy" section if you don't want to deploy a website to GitHub Pages
+# Create a token at https://github.com/settings/tokens ()
+# Enter this token as an environment value with name "GITHUB_TOKEN", "available to all branches", at
+#      https://travis-ci.org/github/waldronlab/ProjectAsPackage/settings
+
 language: r
 r:
   - release
@@ -16,6 +21,7 @@ r_github_packages:
 
 after_success:
   - Rscript -e 'library(covr);codecov()'
+  - Rscript --vanilla -e "pkgdown::build_site(lazy=TRUE)"
 
 deploy:
   provider: pages
