@@ -1,4 +1,5 @@
 # R for travis documentation: https://docs.travis-ci.com/user/languages/r
+# Activated this repo at https://travis-ci.org/organizations/waldronlab/repositories
 
 language: r
 r:
@@ -15,3 +16,11 @@ r_github_packages:
 
 after_success:
   - Rscript -e 'library(covr);codecov()'
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master

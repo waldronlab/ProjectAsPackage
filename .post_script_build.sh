@@ -5,6 +5,8 @@
 # can change to checkout and push to the gh-pages branch if you prefer to keep
 # website documentation separate from the master branch.
 
+# See https://docs.travis-ci.com/user/deployment/pages/
+
 GH_REPO="@github.com/waldronlab/ProjectAsPackage.git"
 FULL_REPO="https://$GH_TOKEN$GH_REPO"
 
