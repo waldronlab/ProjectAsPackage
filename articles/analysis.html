@@ -6,19 +6,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Analysis Vignette • ProjectAsPackage</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Analysis Vignette">
-<meta property="og:description" content="">
-<meta name="twitter:card" content="summary">
+<meta property="og:description" content="ProjectAsPackage">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -72,10 +72,10 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Analysis Vignette</h1>
+      <h1 data-toc-skip>Analysis Vignette</h1>
                         <h4 class="author">Vignette Author</h4>
             
-            <h4 class="date">2020-03-08</h4>
+            <h4 class="date">2020-03-30</h4>
       
       
       <div class="hidden name"><code>analysis.Rmd</code></div>
@@ -89,7 +89,7 @@
 <a href="#preamble" class="anchor"></a>Preamble</h1>
 <p>For interactive / manual vignette building, setting caching instead to TRUE in the above code chunk can dramatically speed up the builds, by caching the results of each chunk. Note that the above chunk is not shown in the built version of the vignette because of the <code>echo=FALSE</code> option.</p>
 <p>First load the analysis library:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ProjectAsPackage)</code></pre></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ProjectAsPackage</span>)</pre></body></html></div>
 </div>
 <div id="r-markdown" class="section level1">
 <h1 class="hasAnchor">
@@ -108,10 +108,10 @@
 <div id="option-1---data-cleaning-done-prior-to-saving-an-r-object-in-package-directory-datagardasil-rda" class="section level2">
 <h2 class="hasAnchor">
 <a href="#option-1---data-cleaning-done-prior-to-saving-an-r-object-in-package-directory-datagardasil-rda" class="anchor"></a>Option 1 - data cleaning done prior to saving an R object in package directory <code>data/gardasil.rda</code>:</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(gardasil)
-<span class="kw"><a href="https://rdrr.io/r/base/class.html">class</a></span>(gardasil)
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="no">gardasil</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span>(<span class="no">gardasil</span>)
 <span class="co">#&gt; [1] "data.frame"</span>
-<span class="kw"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(gardasil)
+<span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(<span class="no">gardasil</span>)
 <span class="co">#&gt;       Age         AgeGroup         Race         Shots       Completed</span>
 <span class="co">#&gt;  Min.   :11.00   18-26:712   white   :732   Min.   :1.000   no :944  </span>
 <span class="co">#&gt;  1st Qu.:15.00   11-17:701   black   :443   1st Qu.:1.000   yes:469  </span>
@@ -132,19 +132,19 @@
 <span class="co">#&gt;                 OB-GYN         :533   NA's    :186  </span>
 <span class="co">#&gt;                                                     </span>
 <span class="co">#&gt;                                                     </span>
-<span class="co">#&gt; </span></code></pre></div>
+<span class="co">#&gt; </span></pre></body></html></div>
 <p>The data-cleaning script used to create the <code>data/gardasil.rda</code> file is traditionally provided in the <code>data-raw/</code> Note that there is a help file for this dataset as well, serving as a codebook. This was generated by the file <code>R/gardasil.R</code> using <em>roxygen</em> markup, then using <em>roxygen2</em> to automatically create the documentation file <code>man/gardasil.Rd</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><a href="https://waldronlab.io/ProjectAsPackage/reference/gardasil.html">?gardasil</a></code></pre></div>
+<div class="sourceCode" id="cb3"><html><body><pre class="r">?<span class="no">gardasil</span></pre></body></html></div>
 </div>
 <div id="option-2---a-function-to-load-and-clean-the-raw-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#option-2---a-function-to-load-and-clean-the-raw-data" class="anchor"></a>Option 2 - a function to load and clean the raw data</h2>
 <p>See the function <code>R/read_gardasil.R</code>, with automatically-generated help page <code>man/read_gardasil.Rd</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><a href="https://waldronlab.io/ProjectAsPackage/reference/read_gardasil.html">?read_gardasil</a></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gardasil2 &lt;-<span class="st"> </span><span class="kw"><a href="https://waldronlab.io/ProjectAsPackage/reference/read_gardasil.html">read_gardasil</a></span>()
-<span class="kw"><a href="https://rdrr.io/r/base/class.html">class</a></span>(gardasil2)
+<div class="sourceCode" id="cb4"><html><body><pre class="r">?<span class="no">read_gardasil</span></pre></body></html></div>
+<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="no">gardasil2</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://waldronlab.io/ProjectAsPackage/reference/read_gardasil.html">read_gardasil</a></span>()
+<span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span>(<span class="no">gardasil2</span>)
 <span class="co">#&gt; [1] "data.frame"</span>
-<span class="kw"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(gardasil2)
+<span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(<span class="no">gardasil2</span>)
 <span class="co">#&gt;       Age         AgeGroup              Race         Shots       Completed</span>
 <span class="co">#&gt;  Min.   :11.00   18-26:712   white        :732   Min.   :1.000   no :944  </span>
 <span class="co">#&gt;  1st Qu.:15.00   11-17:701   black        :443   1st Qu.:1.000   yes:469  </span>
@@ -165,15 +165,15 @@
 <span class="co">#&gt;                 OB-GYN         :533   NA's    :186  </span>
 <span class="co">#&gt;                                                     </span>
 <span class="co">#&gt;                                                     </span>
-<span class="co">#&gt; </span></code></pre></div>
+<span class="co">#&gt; </span></pre></body></html></div>
 <p>You may wish to provide arguments to this function, e.g.:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(gardasil2<span class="op">$</span>RaceSummary)
+<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(<span class="no">gardasil2</span>$<span class="no">RaceSummary</span>)
 <span class="co">#&gt;    white minority     NA's </span>
 <span class="co">#&gt;      732      495      186</span>
-gardasil3 &lt;-<span class="st"> </span><span class="kw"><a href="https://waldronlab.io/ProjectAsPackage/reference/read_gardasil.html">read_gardasil</a></span>(<span class="dt">other.as.NA =</span> <span class="ot">TRUE</span>)
-<span class="kw"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(gardasil3<span class="op">$</span>RaceSummary)
+<span class="no">gardasil3</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://waldronlab.io/ProjectAsPackage/reference/read_gardasil.html">read_gardasil</a></span>(<span class="kw">other.as.NA</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(<span class="no">gardasil3</span>$<span class="no">RaceSummary</span>)
 <span class="co">#&gt;    white minority     NA's </span>
-<span class="co">#&gt;      732      495      186</span></code></pre></div>
+<span class="co">#&gt;      732      495      186</span></pre></body></html></div>
 </div>
 </div>
 <div id="analysis" class="section level1">
@@ -183,10 +183,10 @@ gardasil3 &lt;-<span class="st"> </span><span class="kw"><a href="https://waldro
 <h2 class="hasAnchor">
 <a href="#regression-analysis" class="anchor"></a>Regression analysis</h2>
 <p>Univariate regressions like the following reproduce Table 2 of Chou <em>et al.</em> Relative to public insurance, holders of private, hospital-based, and military insurance are more likely to complete the vaccine series.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fitins &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span>(Completed <span class="op">~</span><span class="st"> </span>InsuranceType,
-           <span class="dt">data=</span>gardasil,
-           <span class="dt">family=</span><span class="kw"><a href="https://rdrr.io/r/stats/family.html">binomial</a></span>(<span class="dt">link=</span><span class="st">'logit'</span>))
-<span class="kw"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(fitins)
+<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="no">fitins</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span>(<span class="no">Completed</span> ~ <span class="no">InsuranceType</span>,
+           <span class="kw">data</span><span class="kw">=</span><span class="no">gardasil</span>,
+           <span class="kw">family</span><span class="kw">=</span><span class="fu"><a href="https://rdrr.io/r/stats/family.html">binomial</a></span>(<span class="kw">link</span><span class="kw">=</span><span class="st">'logit'</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span>(<span class="no">fitins</span>)
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Call:</span>
 <span class="co">#&gt; glm(formula = Completed ~ InsuranceType, family = binomial(link = "logit"), </span>
@@ -212,16 +212,16 @@ gardasil3 &lt;-<span class="st"> </span><span class="kw"><a href="https://waldro
 <span class="co">#&gt; AIC: 1771.1</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Number of Fisher Scoring iterations: 4</span>
-<span class="kw"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="kw"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span>(fitins)), <span class="dv">2</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span>(<span class="fu"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span>(<span class="no">fitins</span>)), <span class="fl">2</span>)
 <span class="co">#&gt;                 (Intercept)  InsuranceTypeprivate payer </span>
 <span class="co">#&gt;                        0.25                        2.15 </span>
 <span class="co">#&gt; InsuranceTypehospital based       InsuranceTypemilitary </span>
-<span class="co">#&gt;                        3.47                        2.33</span></code></pre></div>
+<span class="co">#&gt;                        3.47                        2.33</span></pre></body></html></div>
 </div>
 <div id="an-example-figure" class="section level2">
 <h2 class="hasAnchor">
 <a href="#an-example-figure" class="anchor"></a>An example figure</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/graphics/mosaicplot.html">mosaicplot</a></span>(InsuranceType <span class="op">~</span><span class="st"> </span>Shots, <span class="dt">data=</span>gardasil)</code></pre></div>
+<div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/graphics/mosaicplot.html">mosaicplot</a></span>(<span class="no">InsuranceType</span> ~ <span class="no">Shots</span>, <span class="kw">data</span><span class="kw">=</span><span class="no">gardasil</span>)</pre></body></html></div>
 <div class="figure">
 <img src="analysis_files/figure-html/unnamed-chunk-6-1.png" alt="Mosaic plot of number of shots completed against type of insurance" width="700"><p class="caption">
 Mosaic plot of number of shots completed against type of insurance
@@ -233,18 +233,21 @@ Mosaic plot of number of shots completed against type of insurance
 <h1 class="hasAnchor">
 <a href="#session-information" class="anchor"></a>Session Information</h1>
 <p>This shows which packages and versions were used for the analysis. Note that under RStudio “Tools - Project Options” you can select “Packrat” to create a project-specific library to ensure other analysts will run the exact same version of all packages.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">width =</span> <span class="dv">100</span>)
-<span class="kw"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span>()
-<span class="co">#&gt; R version 3.6.1 (2019-07-05)</span>
-<span class="co">#&gt; Platform: x86_64-apple-darwin15.6.0 (64-bit)</span>
-<span class="co">#&gt; Running under: macOS Mojave 10.14.6</span>
+<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="kw">width</span> <span class="kw">=</span> <span class="fl">100</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span>()
+<span class="co">#&gt; R version 3.6.2 (2017-01-27)</span>
+<span class="co">#&gt; Platform: x86_64-pc-linux-gnu (64-bit)</span>
+<span class="co">#&gt; Running under: Ubuntu 16.04.6 LTS</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Matrix products: default</span>
-<span class="co">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRblas.0.dylib</span>
-<span class="co">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib</span>
+<span class="co">#&gt; BLAS:   /home/travis/R-bin/lib/R/lib/libRblas.so</span>
+<span class="co">#&gt; LAPACK: /home/travis/R-bin/lib/R/lib/libRlapack.so</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; locale:</span>
-<span class="co">#&gt; [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
+<span class="co">#&gt;  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=en_US.UTF-8       </span>
+<span class="co">#&gt;  [4] LC_COLLATE=en_US.UTF-8     LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   </span>
+<span class="co">#&gt;  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                  LC_ADDRESS=C              </span>
+<span class="co">#&gt; [10] LC_TELEPHONE=C             LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       </span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; attached base packages:</span>
 <span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
@@ -253,50 +256,31 @@ Mosaic plot of number of shots completed against type of insurance
 <span class="co">#&gt; [1] ProjectAsPackage_0.0.1</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; loaded via a namespace (and not attached):</span>
-<span class="co">#&gt;  [1] Rcpp_1.0.3       rprojroot_1.3-2  crayon_1.3.4     digest_0.6.23    assertthat_0.2.1</span>
+<span class="co">#&gt;  [1] Rcpp_1.0.4       rprojroot_1.3-2  crayon_1.3.4     digest_0.6.25    assertthat_0.2.1</span>
 <span class="co">#&gt;  [6] MASS_7.3-51.4    R6_2.4.1         backports_1.1.5  magrittr_1.5     evaluate_0.14   </span>
-<span class="co">#&gt; [11] highr_0.8        stringi_1.4.3    rlang_0.4.2      fs_1.3.1         rmarkdown_2.0   </span>
-<span class="co">#&gt; [16] pkgdown_1.4.1    desc_1.2.0       tools_3.6.1      stringr_1.4.0    yaml_2.2.0      </span>
-<span class="co">#&gt; [21] xfun_0.11        compiler_3.6.1   memoise_1.1.0    htmltools_0.4.0  knitr_1.26</span></code></pre></div>
-<p>Note, if you have devtools installed you might use <code><a href="https://rdrr.io/pkg/devtools/man/reexports.html">devtools::session_info()</a></code> to provide a more detailed and structured session info.</p>
+<span class="co">#&gt; [11] highr_0.8        stringi_1.4.6    rlang_0.4.5      fs_1.3.2         rmarkdown_2.1   </span>
+<span class="co">#&gt; [16] pkgdown_1.5.0    desc_1.2.0       tools_3.6.2      stringr_1.4.0    yaml_2.2.1      </span>
+<span class="co">#&gt; [21] xfun_0.12        compiler_3.6.2   memoise_1.1.0    htmltools_0.4.0  knitr_1.28</span></pre></body></html></div>
+<p>Note, if you have devtools installed you might use <code><a href="https://devtools.r-lib.org//reference/reexports.html">devtools::session_info()</a></code> to provide a more detailed and structured session info.</p>
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <div id="tocnav">
-      <h2 class="hasAnchor">
-<a href="#tocnav" class="anchor"></a>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-<li><a href="#preamble">Preamble</a></li>
-      <li><a href="#r-markdown">R Markdown</a></li>
-      <li>
-<a href="#data">Data</a><ul class="nav nav-pills nav-stacked">
-<li><a href="#option-1---data-cleaning-done-prior-to-saving-an-r-object-in-package-directory-datagardasil-rda">Option 1 - data cleaning done prior to saving an R object in package directory <code>data/gardasil.rda</code>:</a></li>
-      <li><a href="#option-2---a-function-to-load-and-clean-the-raw-data">Option 2 - a function to load and clean the raw data</a></li>
-      </ul>
-</li>
-      <li>
-<a href="#analysis">Analysis</a><ul class="nav nav-pills nav-stacked">
-<li><a href="#regression-analysis">Regression analysis</a></li>
-      <li><a href="#an-example-figure">An example figure</a></li>
-      </ul>
-</li>
-      <li><a href="#session-information">Session Information</a></li>
-      </ul>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
 </div>
-      </div>
 
 </div>
 
 
 
       <footer><div class="copyright">
-  <p>Developed by First Last.</p>
+  <p>Developed by Levi Waldron.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
 </div>
 
       </footer>
