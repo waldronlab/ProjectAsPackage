@@ -1,0 +1,17 @@
+# R for travis documentation: https://docs.travis-ci.com/user/languages/r
+
+language: r
+r:
+  - release
+sudo: false
+cache: packages
+
+# Strict checks in place
+warnings_are_errors: false
+
+# Test code coverage
+r_github_packages:
+  - jimhester/covr
+
+after_success:
+  - Rscript -e 'library(covr);codecov()'
